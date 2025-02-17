@@ -15,7 +15,7 @@ body {
     height: 100vh;
     color: black;
     text-decoration: none;
-    background-image: url(photos/cover2.png);
+    background-image: url(photos/cover.png);
     background-size: 75%;
     background-position: center;
     background-repeat: no-repeat;
@@ -25,8 +25,8 @@ body {
 .logo a{
     color: black;
     text-decoration: none;
-    font-size: 25px;
-    letter-spacing: 4px; /* Adjust the value as needed */
+    font-size: 35px;
+    letter-spacing: 6px; /* Adjust the value as needed */
 }
 
 .container{
@@ -64,7 +64,7 @@ nav ul li a{
 /*--about--*/
 
 #about{
-    padding: 80px 0;
+    padding: 300px 0;
     color:black;
     font-family: 'Montserrat', sans-serif;
     box-sizing: border-box;
@@ -90,4 +90,46 @@ nav ul li a{
     padding-left: 50px;
 }
 
+.sub-title{
+    font-size: 25px;
+    color: black;
+    margin-bottom: 20px;
+}
 
+.tab-titles{
+    display: flex;
+    margin: 20px 0 40px;
+}
+
+.tab-links{
+    margin-right: 50px;
+    font-size: 15px;
+    font-weight: 500;
+    cursor: pointer;
+    position: relative;
+}
+
+.tab-links.active-link::after{}
+
+.tab-contents ul li{
+    list-style: none;
+    margin: 10px 0;
+}
+.tab-contents ul li span{
+    font-size: 10px;
+}
+.tab-contents{
+    display: none;
+}
+.tab-contents.active-tab{
+    display: block;
+}
+
+/*--work--*/
+
+#work{
+    padding: 300px 0;
+    color:black;
+    font-family: 'Montserrat', sans-serif;
+    box-sizing: border-box;
+}

@@ -15,16 +15,13 @@
             </div>
             <ul>
                 <li><a href="index.html">HOME</a></li>
-                <li><a href="about.html">ABOUT</a></li>
-                <li><a href="work.html">WORK</a></li> 
+                <li><a href="#about">ABOUT</a></li>
+                <li><a href="#work">WORK</a></li> 
                 <li><a href="contact.html">CONTACT</a></li>           
             </ul>
         </nav>
     </div>
 </div>
-    
-</body>
-</html>
 <!--about-->
 <div id="about">
     <div class="container">
@@ -33,8 +30,73 @@
                 <img src="photos/me1.png" alt="Connor Kasner">
             </div>
             <div class="about-col-2">
-                <h1>WHO AM I?</h1>
+                <h1 class="sub-title">WHO AM I?</h1>
                 <p>Im just some guy from Ohio who solves and creates problems</p2>
+
+                <div class="tab-titles">
+                    <p class="tab-links active-link" onclick="opentab('skills')">SKILLS</p>
+                    <p class="tab-links" onclick="opentab('experience')">EXPERIENCE</p>
+                    <p class="tab-links" onclick="opentab('education')">EDUCTION</p>
+                    <p class="tab-links" onclick="opentab('hobbies')">HOBBIES</p>
             </div>
+            <div class="tab-contents active-tab" id="skills">
+                <ul>
+                    <li><span>Adobe<br>Indesign</span></li>
+                    <li><span>3D Modeling<br>Rhino</span></li>
+                    <li><span>Rendering<br>Enscape Vray</span></li>
+                </ul>
+            </div>
+            <div class="tab-contents" id="experience">
+                <ul>
+                    <li><span>Golf Galaxy<br>Designing Buildings</span></li>
+                    <li><span>The Farmers Rail<br>Designing Buildings</span></li>
+                    <li><span>Champlin<br>Designing Buildings</span></li>
+                    <li><span>Wolfgang + Hite<br>Designing Buildings</span></li>
+                </ul>
+            </div>
+            <div class="tab-contents" id="education">
+                <ul>
+                    <li><span>University of Cincinnati<br>Designing Buildings</span></li>
+                    <li><span>HFT Stuttgart<br>Designing Buildings</span></li>
+                    <li><span>Architecture<br>Designing Buildings</span></li>
+                </ul>
+            </div>            
+            <div class="tab-contents" id="hobbies">
+                <ul>
+                    <li><span>Snowboarding<br>Designing Buildings</span></li>
+                    <li><span>Skating<br>Designing Buildings</span></li>
+                    <li><span>Music<br>Designing Buildings</span></li>
+                </ul>
+            </div>
+        </div>
     </div>
 </div>
+<!--Work-->
+<div id="work">
+    <div class="container">
+        <div class="row">
+            <div class="about-col-1">
+            </div>
+            <div class="about-col-2">
+                <h1 class="sub-title">I ACTUALLY WORK?</h1>
+                <p>Collection of some problems I kinda solved</p2>
+
+
+<script>
+
+    var tablinks = document.getElementsByClassName('tab-links');
+    var tabcontents = document.getElementsByClassName('tab-contents');
+    function opentab(tabname){
+        for(tablink of tablinks){
+            tablink.classList.remove('active-link');
+        }
+        for(tabcontent of tabcontents){
+            tabcontent.classList.remove('active-tab');
+        }
+        event.currentTarget.classList.add('active-link');
+        document.getElementById(tabname).classList.add("active-tab");
+    }
+
+</script>
+</body>
+</html>
